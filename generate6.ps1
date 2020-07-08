@@ -28,7 +28,7 @@ foreach ($category in $list_categories) {
     if($category.list_category -ne ""){
         $category_filename = $category.list_category.replace(" ", "-") + ".html"
         $category_image = "big.jpg"
-        $category_header = $header.Replace("##PageTitle##","Booktrawler: The Big 5 Books in " + $category.list_category)
+        $category_header = $header.Replace("##PageTitle##","Big 5 Club: The Big 5 Books in " + $category.list_category)
         $category_header = $category_header.Replace("##ListTitle##","The Big 5 Books ... " + $category.list_category)
         $category_header = $category_header.Replace("##CoverImage##",$category_image)
         $category_header = $category_header.Replace("##CategoryLink##","")
@@ -84,7 +84,7 @@ $home_filename="index.html"
 $pagination = 20 
 
 # Replace index page tags with header with values
-$index_header = $header.Replace("##PageTitle##","Booktrawler: The Big 5 Books")
+$index_header = $header.Replace("##PageTitle##","Big 5 Club: The Big 5 Books")
 $index_header = $index_header.Replace("##ListTitle##","The Big 5 Books ...")
 $index_header = $index_header.Replace("##CoverImage##","big.jpg")
 $index_header = $index_header.Replace("##CategoryLink##","")
@@ -180,7 +180,7 @@ foreach ($category in $book_categories) {
     # Replace tags with header with values
     $page_header = ""
     $page_header = $header
-    $page_header = $page_header.Replace("##PageTitle##","Booktrawler: $current_list")
+    $page_header = $page_header.Replace("##PageTitle##","Big 5 Club: $current_list")
     $page_header = $page_header.Replace("##ListTitle##",$current_list)
     $category_link = $category.list_category.replace(" ", "-")
     $category_link = '<a href="' + $category_link + '.html" class="text-link">' + $category.list_category + '</a>'

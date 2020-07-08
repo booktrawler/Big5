@@ -6,9 +6,9 @@ $header = Get-Content -Path header_bootstrap.html -RAW
 $footer = Get-Content -Path footer_bootstrap.html -RAW
 
 # Import the contents of the booklist.xlsm file, sort it and store it in the $book_list variable.
-$book_list = Import-Excel .\booklist.xlsm -WorkSheetname Booklist #| sort -Property "list_links"
-$book_categories = Import-Excel .\booklist.xlsm -WorkSheetname Booklist | select-object list_links, list_links_href, list_category -Unique
-$list_categories = Import-Excel .\booklist.xlsm -WorkSheetname Booklist | select-object list_category -Unique | sort-object -Property "list_category"
+$book_list = Import-Excel C:\Users\richa\OneDrive\Documents\GitHub\Booklist\booklist.xlsm -WorkSheetname Booklist #| sort -Property "list_links"
+$book_categories = Import-Excel C:\Users\richa\OneDrive\Documents\GitHub\Booklist\booklist.xlsm -WorkSheetname Booklist | select-object list_links, list_links_href, list_category -Unique
+$list_categories = Import-Excel C:\Users\richa\OneDrive\Documents\GitHub\Booklist\booklist.xlsm -WorkSheetname Booklist | select-object list_category -Unique | sort-object -Property "list_category"
 
 #==========================================================================================================#
     # Create CATEGORY Pages for book lists
@@ -196,7 +196,7 @@ foreach ($category in $book_categories) {
 
 
     # Output header to new web page
-    If (Test-Path $filename  -PathType leaf) {$a="hello"} Else {Write-Host "New: " $filename}
+    If (Test-Path $filename  -PathType leaf) {remove-item $filename} Else {Write-Host "New: " $filename}
     out-file -filepath $filename -InputObject $page_header -Encoding utf8
 
     # Loop through all the records in the CSV to find books for this category

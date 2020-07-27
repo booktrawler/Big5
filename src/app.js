@@ -13,7 +13,7 @@ search.addWidgets([
     container: '#clear-refinements',
   }),
   instantsearch.widgets.refinementList({
-    container: '#brand-list',
+    container: '#refinement-list',
     attribute: 'category',
   }),
   instantsearch.widgets.hits({
@@ -21,7 +21,7 @@ search.addWidgets([
     templates: {
       item: `
         <div>
-          <img src="{{image}}" align="left" width="50" alt="{{name}}" />
+          <!-- <img src="{{image}}" align="left" width="50" alt="{{name}}" /> -->
           <div class="hit-name">
             <a href="{{link}}">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</a>
           </div>

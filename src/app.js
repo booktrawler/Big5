@@ -21,15 +21,13 @@ search.addWidgets([
     templates: {
       item: `
         <div>
-          <img src="{{image}}" align="left" alt="{{name}}" />
+          <img src="{{image}}" align="left" width=50 alt="{{name}}" />
           <div class="hit-name">
-            {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
+            <a href="{{link}}">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</a>
           </div>
           <div class="hit-description">
             {{#helpers.highlight}}{ "attribute": "category" }{{/helpers.highlight}}
           </div>
-          <div class="hit-price">\${{price}}</div>
-        </div>
       `,
     },
   }),

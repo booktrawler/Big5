@@ -14,7 +14,7 @@ search.addWidgets([
   }),
   instantsearch.widgets.refinementList({
     container: '#brand-list',
-    attribute: 'brand',
+    attribute: 'category',
   }),
   instantsearch.widgets.hits({
     container: '#hits',
@@ -28,7 +28,6 @@ search.addWidgets([
           <div class="hit-description">
             {{#helpers.highlight}}{ "attribute": "category" }{{/helpers.highlight}}
           </div>
-          <div class="hit-price">\${{price}}</div>
         </div>
       `,
     },

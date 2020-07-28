@@ -14,32 +14,22 @@ search.addWidgets([
   }),
   instantsearch.widgets.refinementList({
     container: '#brand-list',
-    attribute: 'category',
+    attribute: 'brand',
   }),
   instantsearch.widgets.hits({
     container: '#hits',
     templates: {
       item: `
         <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <img src="{{image}}" align="left" width="50" alt="{{name}}" />
-=======
-          <!-- <img src="{{image}}" align="left" width="50" alt="{{name}}" /> -->
->>>>>>> parent of ef34afe... Update app.js
-=======
-          <!-- <img src="{{image}}" align="left" width="50" alt="{{name}}" /> -->
->>>>>>> parent of ef34afe... Update app.js
-=======
-          <!-- <img src="{{image}}" align="left" width="50" alt="{{name}}" /> -->
->>>>>>> parent of ef34afe... Update app.js
+          <img src="{{image}}" align="left" alt="{{name}}" />
           <div class="hit-name">
-            <a href="{{link}}">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</a>
+            {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
           </div>
           <div class="hit-description">
             {{#helpers.highlight}}{ "attribute": "category" }{{/helpers.highlight}}
           </div>
+          <div class="hit-price">\${{price}}</div>
+        </div>
       `,
     },
   }),

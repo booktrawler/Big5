@@ -22,7 +22,11 @@ search.addWidgets([
       item: `
         <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <img src="{{image}}" align="left" width="50" alt="{{name}}" />
+=======
+          <!-- <img src="{{image}}" align="left" width="50" alt="{{name}}" /> -->
+>>>>>>> parent of ef34afe... Update app.js
 =======
           <!-- <img src="{{image}}" align="left" width="50" alt="{{name}}" /> -->
 >>>>>>> parent of ef34afe... Update app.js

@@ -8,9 +8,15 @@ const search = instantsearch({
 search.addWidgets([
   instantsearch.widgets.searchBox({
     container: '#searchbox',
+    placeholder: 'Search for Big5 booklists',
+    autofocus: true,
+    searchAsYouType: true,
+    showLoadingIndicator: true,
   }),
   instantsearch.widgets.clearRefinements({
     container: '#clear-refinements',
+    operator: 'or',
+    searchablePlaceholder: 'Search for Big5 booklists',
   }),
   instantsearch.widgets.refinementList({
     container: '#brand-list',
@@ -21,7 +27,6 @@ search.addWidgets([
     templates: {
       item: `
         <div>
-          <img src="{{image}}" align="left" alt="{{name}}" />
           <div class="hit-name">
             {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
           </div>

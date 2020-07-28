@@ -21,7 +21,11 @@ search.addWidgets([
     templates: {
       item: `
         <div>
+<<<<<<< HEAD
           <img src="{{image}}" align="left" width="50" alt="{{name}}" />
+=======
+          <!-- <img src="{{image}}" align="left" width="50" alt="{{name}}" /> -->
+>>>>>>> parent of ef34afe... Update app.js
           <div class="hit-name">
             <a href="{{link}}">{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</a>
           </div>
